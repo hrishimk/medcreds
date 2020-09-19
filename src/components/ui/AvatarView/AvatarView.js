@@ -2,6 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classes from './AvatarView.module.scss'
 
+
+/**
+ * User avatar component
+ */
 const AvatarView = ({ name, path }) => {
     return (
         <div className={classes.AvatarView}>

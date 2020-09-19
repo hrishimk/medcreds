@@ -54,6 +54,7 @@ const DropDown = (props) => {
                 <span className={classes.labelText}>{labelFormatted}</span>
                 <div className={classes.input} onClick={toggleDropDown}>
                     <span className={classes.selectedText}>{selectedText}</span>
+                    <div className={classes.downArrow}></div>
                 </div>
                 {show && List}
             </label>
