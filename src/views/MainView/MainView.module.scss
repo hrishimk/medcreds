@@ -1,0 +1,139 @@
+@import "../../style/main.scss";
+.MainView {
+  .background {
+    position: absolute;
+    width: 100%;
+    height: 380px;
+    z-index: -1;
+    left: 0;
+    background-color: map-get($map: $colors, $key: "background2");
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: map-get($map: $colors, $key: "background2");
+      width: 100%;
+      height: 200%;
+      transform: rotate(30deg) translate(-50%, 0%);
+      left: 0;
+      top: 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: map-get($map: $colors, $key: "background2");
+      width: 100%;
+      height: 200%;
+      transform: rotate(-30deg) translate(50%, 0%);
+      left: 0;
+      top: 0;
+    }
+  }
+
+  .body {
+    max-width: 1220px;
+    width: 100%;
+    margin: auto;
+
+    .mainTitle {
+      color: map-get($map: $colors, $key: "white");
+      margin: 15px 0;
+    }
+
+    .descp {
+      color: map-get($map: $colors, $key: "button1");
+      font-weight: bold;
+    }
+  }
+
+  .detail {
+    padding: 70px 0;
+  }
+
+  .content {
+    height: 603px;
+    display: flex;
+    box-shadow: 1px 3px 10px 0px rgba(106, 106, 106, 0.3);
+    margin: auto;
+    margin-bottom: 100px;
+    background-color: map-get($map: $colors, $key: "white");
+    border-radius: 4px;
+  }
+
+  .imgView {
+    height: 100%;
+    min-width: 401px;
+    background-color: map-get($map: $colors, $key: "light");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .formWrap {
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .buttonWrap {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .form {
+    padding: 24px;
+  }
+
+  .inputWrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media only screen and (max-width: 1300px) {
+    //Background design
+
+    .background {
+      &::after {
+        display: none;
+      }
+      &::before {
+        display: none;
+      }
+    }
+
+    // Detail
+    .detail {
+      text-align: center;
+      padding: 20px 0;
+
+      .mainTitle {
+        font-size: 25px;
+      }
+
+      .descp {
+        font-size: 20px;
+      }
+    }
+
+    // Form Wrap
+    .content {
+      height: auto;
+    }
+
+    .imgView {
+      display: none;
+    }
+
+    // Form
+    .inputWrap {
+      justify-content: center;
+    }
+
+    .buttonWrap {
+      justify-content: center;
+    }
+  }
+}

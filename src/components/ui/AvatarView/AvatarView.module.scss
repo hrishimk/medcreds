@@ -1,0 +1,24 @@
+@import "../../../style/main.scss";
+
+.AvatarView {
+  margin: 0 20px;
+
+  .alignWrap {
+    display: flex;
+    align-items: center;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-color: grey;
+    border-radius: 50%;
+  }
+  .name {
+    margin-left: 10px;
+    color: map-get($map: $colors, $key: "white");
+    font-weight: bold;
+    font-size: 20px;
+  }
+}

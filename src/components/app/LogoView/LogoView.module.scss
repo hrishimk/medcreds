@@ -1,0 +1,9 @@
+@import "../../../style/main.scss";
+
+.LogoView {
+  width: 130px;
+  height: 60px;
+  margin: 0px 50px;
+  background-image: url("../../../assets/logo.png");
+  background-size: cover;
+}

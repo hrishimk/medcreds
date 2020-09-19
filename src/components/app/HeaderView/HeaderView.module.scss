@@ -1,0 +1,61 @@
+.HeaderView {
+  display: flex;
+  padding-top: 20px;
+  justify-content: space-between;
+
+  .innerWrap {
+    display: flex;
+    flex-grow: 1;
+  }
+
+  .links {
+    flex-grow: 1;
+    display: flex;
+    height: fit-content;
+  }
+
+  .hamburger {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    position: relative;
+    background-image: url(../../../assets/menu.png);
+    background-size: contain;
+
+    .menuList {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: #fff;
+      color: #000;
+      padding: 10px;
+      border-radius: 4px;
+      li {
+        margin: 5px 0;
+        list-style-type: none;
+
+        &:hover {
+          background-color: #f0f0f0;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    flex-direction: column;
+    align-items: center;
+
+    .innerWrap {
+      margin: 20px 0;
+      flex-direction: row-reverse;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+
+    .innerWrap {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import "../../../style/main.scss";
+
+.LinkView {
+  color: #fff;
+  margin: 10px;
+  cursor: pointer;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background-color: map-get($map: $colors, $key: "button1");
+    left: -5%;
+    bottom: -10px;
+    border-radius: 3px;
+    transition: width 0.3s;
+    visibility: hidden;
+  }
+
+  &.active {
+    font-weight: bold;
+    // margin: 10px 20px;
+    &::after {
+      width: 110%;
+      visibility: visible;
+    }
+  }
+}

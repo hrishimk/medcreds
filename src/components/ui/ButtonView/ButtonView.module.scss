@@ -1,0 +1,15 @@
+@import "../../../style/main.scss";
+
+.ButtonView {
+  background-color: map-get($map: $colors, $key: "button1");
+  border: 0;
+  min-width: 170px;
+  padding: 0 18px;
+  height: 55px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-size: 19px;
+  color: map-get($map: $colors, $key: "white");
+  margin: 22px 15px;
+  cursor: pointer;
+}

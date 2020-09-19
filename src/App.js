@@ -1,24 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import MainView from './views/MainView/MainView'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" >
+      <MainView />
+      {/* <FormFiled label="Organization Name" required size="long" placeHolder={"asdsa@asdas.com"} />
+      <DropDown label="Country" required list={[
+        {
+          id: 'option1',
+          title: 'Option1'
+        },
+        {
+          id: 'option2',
+          title: 'Option2'
+        }
+        ,
+        {
+          id: 'option3',
+          title: 'Option3'
+        }
+      ]} change={(val) => { alert(val) }} />
+      <ButtonView label="Add" /> */}
     </div>
   );
 }

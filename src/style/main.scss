@@ -1,0 +1,7 @@
+@import "./colors";
+@import "./fonts";
+
+* {
+  font-family: "default";
+  color: map-get($map: $colors, $key: "font1")
+}
