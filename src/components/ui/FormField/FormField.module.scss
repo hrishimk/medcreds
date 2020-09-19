@@ -33,6 +33,23 @@
     margin-top: 10px;
   }
 
+  $placeholderColor: #a9aaac;
+
+  ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $placeholderColor;
+    opacity: 1; /* Firefox */
+  }
+
+  :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: $placeholderColor;
+  }
+
+  ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: $placeholderColor;
+  }
   .errMsg {
     position: absolute;
     bottom: -25px;
