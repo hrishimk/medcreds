@@ -36,6 +36,12 @@ const DropDown = (props) => {
         change(item)
     }
 
+    const blurHandler = (e) => {
+        setTimeout(() => {
+            toggleDropDown()
+        }, 300)
+    }
+
     const List = (<ul className={classes.list} >
         {
             list.map(item => (
@@ -52,7 +58,7 @@ const DropDown = (props) => {
         <div className={[classes.DropDown, classes[size]].join(' ')}>
             <label className={classes.label}>
                 <span className={classes.labelText}>{labelFormatted}</span>
-                <div tabIndex="0" className={classes.input} onClick={toggleDropDown} onBlur={toggleDropDown}>
+                <div tabIndex="0" className={classes.input} onClick={toggleDropDown} onBlur={blurHandler} >
                     <span className={classes.selectedText}>{selectedText}</span>
                     <div className={classes.downArrow}></div>
                 </div>
