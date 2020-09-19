@@ -12,6 +12,7 @@
     flex-grow: 1;
     display: flex;
     height: fit-content;
+    margin-left: 80px;
   }
 
   .hamburger {
@@ -37,7 +38,6 @@
         padding: 10px 0;
         list-style-type: none;
 
-
         &:hover {
           background-color: #f0f0f0;
         }
@@ -49,6 +49,10 @@
     flex-direction: column;
     align-items: center;
 
+    .links {
+      margin-left: 0;
+    }
+
     .innerWrap {
       margin: 20px 0;
       flex-direction: row-reverse;
@@ -56,7 +60,6 @@
   }
 
   @media only screen and (max-width: 500px) {
-
     .innerWrap {
       flex-direction: column;
       align-items: center;

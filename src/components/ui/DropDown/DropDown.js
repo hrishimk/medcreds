@@ -52,7 +52,7 @@ const DropDown = (props) => {
         <div className={[classes.DropDown, classes[size]].join(' ')}>
             <label className={classes.label}>
                 <span className={classes.labelText}>{labelFormatted}</span>
-                <div className={classes.input} onClick={toggleDropDown}>
+                <div tabIndex="0" className={classes.input} onClick={toggleDropDown} onBlur={toggleDropDown}>
                     <span className={classes.selectedText}>{selectedText}</span>
                     <div className={classes.downArrow}></div>
                 </div>
